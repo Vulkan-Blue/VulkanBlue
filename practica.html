@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> VULKAN BLUE</title>
+  <link rel="icon" href="logo.png" type="image/x-icon" >
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="loby.css">
+</head>
+
+<body>
+  <div id="Pagina" class="pag">
+    <a href="" id="boton1"><img src="img/IA.webp" alt="" height="30px" width="30px"></a>
+    <!-- Otros botones -->
+  </div>
+
+  <script src="acceso.js"></script>
+  <script src="usuario.js"></script>
+  <script>
+    // JavaScript para cambiar la posición del botón con transición dinámica
+    document.addEventListener("DOMContentLoaded", function() {
+      const boton1 = document.getElementById("boton1");
+      setTimeout(() => {
+        const currentTop = boton1.offsetTop; // Obtener la posición top actual
+        const currentLeft = boton1.offsetLeft; // Obtener la posición left actual
+
+        boton1.style.top = `${currentTop + 200}px`; // Nueva posición top dinámica
+        boton1.style.left = `${currentLeft + 150}px`; // Nueva posición left dinámica
+      }, 1000); // Retraso de 1 segundo para ver la animación
+    });
+  </script>
+</body>
+</html>
