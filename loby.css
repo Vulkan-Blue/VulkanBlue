@@ -72,7 +72,7 @@ color: #0077ff;
   .pag a:nth-child(12) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0, 175px); }
   
   /* CSS para diseño responsivo */
-  @media (max-width: 600px) {
+  @media (max-width: 690px) {
     .pag a {
       width: 70px; /* Tamaño del botón reducido para móviles */
       height: 70px;
@@ -84,3 +84,10 @@ color: #0077ff;
    a:hover{ 
     transform: scale(1.1);
    } 
+
+
+  
+   a:hover{
+    background-color: #2193b6;
+    padding: 20px 20px;
+  }
