@@ -6,7 +6,7 @@
     <title>VulkanStore
         
     </title>
-    <link rel="stylesheet" href="loby.css">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,12 +35,31 @@
         }
 
         .card img {
+            display: block;
             width: 100%;
+            height: auto;
+           
         }
-
+        .scroll-button {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ccc;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .scroll-left {
+            left: 0;
+        }
+        .scroll-right {
+            right: 0;
+        }
         .card-description {
+            display: none;
             padding: 15px;
             font-size: 0.9em;
+            
         }
 
         .card a {
@@ -57,7 +76,7 @@
         }
 
         .card button:hover {
-            background-color: #005f73;
+            background-color: #005f73;            
         }
 
         @media (max-width: 600px) {
@@ -77,7 +96,7 @@
     <div class="container">
         <div class="card">
             <img id="image1" src="  " alt="Archivo 1">
-            <div class="card-description">
+            <div class="card-description" id="p1">
                <h1>Politopya:</h1> 
                <p>Politopya es un juego de simulación política y estratégica.</p>
                <p>Los jugadores pueden crear y gestionar su propio país virtual.</p>
@@ -91,6 +110,7 @@
                <p>Politopya permite a los jugadores experimentar los desafíos del liderazgo en un mundo virtual.</p>
 
             </div>
+            <button id="mostrarP1">Detalles</button>
             <a href="aplicaciones/Polytopia_2.11.0.13185_apkcombo.app.apk" download>
                 <button>Descargar androide</button>
             </a>
@@ -101,7 +121,7 @@
 
         <div class="card">
             <img id="image2" src="  " alt="Archivo 2">
-            <div class="card-description">
+            <div class="card-description" id="p2">
                <h1>Win Rar</h1>
                <p>WinRAR es un programa de compresión de archivos ampliamente utilizado.</p>
 <p>Permite comprimir archivos y carpetas en varios formatos, principalmente en RAR y ZIP.</p>
@@ -115,6 +135,7 @@
 <p>La aplicación tiene una función de administración de aplicaciones, permitiendo ver, desinstalar o mover aplicaciones en el dispositivo.</p>
 <p>File Manager ofrece una experiencia fluida y fácil de usar, con opciones avanzadas para usuarios que necesitan organizar grandes cantidades de archivos.</p>
             </div>
+            <button id="mostrarP2">Mostrar P1</button>
             <a href="aplicaciones/RAR_2020.03.31_apkcombo.app.apk" download>
                 <button>Descargar Archivo</button>
             </a>
@@ -124,7 +145,7 @@
 
         <div class="card">
             <img id="image3" src="   " alt="Archivo 3">
-            <div class="card-description">
+            <div class="card-description" id="p3">
             <h1>File Manager</h1>
             <p>File Manager es una aplicación diseñada para gestionar los archivos en dispositivos móviles y tabletas.</p>
 <p>Permite a los usuarios explorar, organizar y administrar sus archivos y carpetas de manera eficiente.</p>
@@ -136,14 +157,88 @@
 <p>También soporta la gestión de archivos comprimidos, permitiendo descomprimir y extraer archivos ZIP, RAR, y otros formatos.</p>
 
             </div>
+            <button id="mostrarP3">Mostrar P1</button>
             <a href="aplicaciones/File Manager_3.4.9_apkcombo.app.apk" download>
                 <button>Descargar Archivo</button>
             </a>
             <a href="https://apps.apple.com/us/app/administrador-de-ficheros/id1664683192?l=es-MX"><button>Descargar archivo IOS</button></a>
             
         </div>
-        <!-- Agrega más tarjetas aquí -->
+     
+    <div class="card">
+        <img id="image4" src="   " alt="Archivo 4">
+        <div class="card-description" id="p4">
+        <h1>PicBlue</h1>
+        <p>File Manager es una aplicación diseñada para gestionar los archivos en dispositivos móviles y tabletas.</p>
+<p>Permite a los usuarios explorar, organizar y administrar sus archivos y carpetas de manera eficiente.</p>
+<p>Con File Manager, puedes mover, copiar, pegar, eliminar y renombrar archivos fácilmente desde una interfaz intuitiva.</p>
+<p>La aplicación es compatible con una amplia gama de formatos de archivo, incluyendo documentos, imágenes, videos, y archivos comprimidos.</p>
+<p>File Manager ofrece la capacidad de acceder a archivos en almacenamiento local, tarjetas SD y servicios en la nube como Google Drive, Dropbox, y OneDrive.</p>
+<p>Los usuarios pueden buscar archivos de manera rápida utilizando la función de búsqueda incorporada.</p>
+<p>File Manager permite la visualización previa de muchos tipos de archivos, como imágenes, documentos PDF y archivos de texto.</p>
+<p>También soporta la gestión de archivos comprimidos, permitiendo descomprimir y extraer archivos ZIP, RAR, y otros formatos.</p>
+
+        </div>
+        <button id="mostrarP4">Detalles</button>
+        <a href="aplicaciones/File Manager_3.4.9_apkcombo.app.apk" download>
+            <button>Descargar Archivo</button>
+        </a>
+        <a href="https://apps.apple.com/us/app/administrador-de-ficheros/id1664683192?l=es-MX"><button>Descargar archivo IOS</button></a>
+        
     </div>
+    <div class="card">
+        <img id="image5" src="   " alt="Archivo 5">
+        <div class="card-description" id="p5">
+        <h1>VulkanStore</h1>
+        <p>File Manager es una aplicación diseñada para gestionar los archivos en dispositivos móviles y tabletas.</p>
+    <p>Permite a los usuarios explorar, organizar y administrar sus archivos y carpetas de manera eficiente.</p>
+    <p>Con File Manager, puedes mover, copiar, pegar, eliminar y renombrar archivos fácilmente desde una interfaz intuitiva.</p>
+    <p>La aplicación es compatible con una amplia gama de formatos de archivo, incluyendo documentos, imágenes, videos, y archivos comprimidos.</p>
+    <p>File Manager ofrece la capacidad de acceder a archivos en almacenamiento local, tarjetas SD y servicios en la nube como Google Drive, Dropbox, y OneDrive.</p>
+    <p>Los usuarios pueden buscar archivos de manera rápida utilizando la función de búsqueda incorporada.</p>
+    <p>File Manager permite la visualización previa de muchos tipos de archivos, como imágenes, documentos PDF y archivos de texto.</p>
+    <p>También soporta la gestión de archivos comprimidos, permitiendo descomprimir y extraer archivos ZIP, RAR, y otros formatos.</p>
+    
+        </div>
+        <button id="mostrarP5">Detalles</button>
+        <a href="aplicaciones/File Manager_3.4.9_apkcombo.app.apk" download>
+            <button>Descargar Archivo</button>
+        </a>
+        <a href="https://apps.apple.com/us/app/administrador-de-ficheros/id1664683192?l=es-MX"><button>Descargar archivo IOS</button></a>
+        
+    </div>
+    <div class="card">
+        <img id="image3" src="   " alt="Archivo 6">
+        <div class="card-description" id="p6">
+        <h1>Create WEB</h1>
+        <p>File Manager es una aplicación diseñada para gestionar los archivos en dispositivos móviles y tabletas.</p>
+    <p>Permite a los usuarios explorar, organizar y administrar sus archivos y carpetas de manera eficiente.</p>
+    <p>Con File Manager, puedes mover, copiar, pegar, eliminar y renombrar archivos fácilmente desde una interfaz intuitiva.</p>
+    <p>La aplicación es compatible con una amplia gama de formatos de archivo, incluyendo documentos, imágenes, videos, y archivos comprimidos.</p>
+    <p>File Manager ofrece la capacidad de acceder a archivos en almacenamiento local, tarjetas SD y servicios en la nube como Google Drive, Dropbox, y OneDrive.</p>
+    <p>Los usuarios pueden buscar archivos de manera rápida utilizando la función de búsqueda incorporada.</p>
+    <p>File Manager permite la visualización previa de muchos tipos de archivos, como imágenes, documentos PDF y archivos de texto.</p>
+    <p>También soporta la gestión de archivos comprimidos, permitiendo descomprimir y extraer archivos ZIP, RAR, y otros formatos.</p>
+    
+        </div>
+        <button id="mostrarP6">Detalles</button>
+        <a href="aplicaciones/File Manager_3.4.9_apkcombo.app.apk" download>
+            <button>Descargar Archivo</button>
+        </a>
+        <a href="https://apps.apple.com/us/app/administrador-de-ficheros/id1664683192?l=es-MX"><button>Descargar archivo IOS</button></a>
+        
+    </div>
+    <!-- Agrega más tarjetas aquí -->
+    </div>
+
+    <button class="scroll-button scroll-right" onclick="scrollRight()">➡️</button>
+
+
+
+
+
+
+
 
     <script>
         function downloadImage(imageId) {
@@ -157,5 +252,40 @@
             document.body.removeChild(link);
         }
     </script>
+
+<script>
+    function mostrarOcultar(id) {
+        var elemento = document.getElementById(id);
+        if (elemento.style.display === 'none') {
+            elemento.style.display = 'block';
+        } else {
+            elemento.style.display = 'none';
+        }
+    }
+
+    document.getElementById('mostrarP1').addEventListener('click', function() {
+        mostrarOcultar('p1');
+    });
+
+    document.getElementById('mostrarP2').addEventListener('click', function() {
+        mostrarOcultar('p2');
+    });
+
+    document.getElementById('mostrarP3').addEventListener('click', function() {
+        mostrarOcultar('p3');
+    });
+
+    document.getElementById('mostrarP4').addEventListener('click', function() {
+        mostrarOcultar('p4');
+    });
+
+    document.getElementById('mostrarP5').addEventListener('click', function() {
+        mostrarOcultar('p5');
+    });
+
+    document.getElementById('mostrarP6').addEventListener('click', function() {
+        mostrarOcultar('p6');
+    });
+</script>
 </body>
 </html>

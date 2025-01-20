@@ -9,6 +9,7 @@
     <style>
 .misHTMLs{
     position: fixed;
+    background-color: #ddd;
               top: 300px;
             right: 0;
             width: 20%;
@@ -58,7 +59,7 @@
         }
         .dropdown-content {
             margin-bottom: 20px;
-            position: fixed;
+            position: absolute;
             background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
@@ -120,7 +121,7 @@
 
 <textarea name="text" id="text"></textarea>
 
-<button onclick="crearParrafo()">Crear Párrafo<i class="fa fa-plus"></i></button>
+
 <button onclick="descargarArchivo()">Descargar Párrafo<i class="fa fa-download"></i></button>
 </div>
 
@@ -148,7 +149,7 @@
           // Crear una nueva etiqueta p
           var lecusu = document.createElement('h1');
           lecusu.textContent = texto;
-          var nuevoParrafo = document.createElement('h1');
+          var nuevoParrafo = document.createElement('p');
 
           var etiqueta = "<";
           var etiqueta1 = "/";
@@ -165,7 +166,7 @@
         
           // Agregar el nuevo párrafo al body del documento
           miDiv.appendChild(nuevoParrafo);
-          document.body.appendChild(lecusu)
+          lectura.appendChild(lecusu);
 
           //borrar textarea
           texto.addEventListener('input', function() { 
@@ -178,7 +179,7 @@
           // Crear una nueva etiqueta p
           var lecusu = document.createElement('h2');
           lecusu.textContent = texto;
-          var nuevoParrafo = document.createElement('h2');
+          var nuevoParrafo = document.createElement('p');
           var etiqueta = "<";
           var etiqueta1 = "/";
           var etiqueta2 = "h2";
@@ -194,14 +195,14 @@
           // Agregar el nuevo párrafo al body del documento
           miDiv.appendChild(nuevoParrafo);
           
-          document.body.appendChild(lecusu)
+          lectura.appendChild(lecusu);
         }
         function titulo3() {
         var texto = document.getElementById('text').value;
           // Crear una nueva etiqueta p
           var lecusu = document.createElement('h3');
           lecusu.textContent = texto;
-          var nuevoParrafo = document.createElement('h3');
+          var nuevoParrafo = document.createElement('p');
           var etiqueta = "<";
           var etiqueta1 = "/";
           var etiqueta2 = "h3";
@@ -216,14 +217,14 @@
         
           // Agregar el nuevo párrafo al body del documento
           miDiv.appendChild(nuevoParrafo);
-          document.body.appendChild(lecusu)
+          lectura.appendChild(lecusu);
         }
         function titulo4() {
         var texto = document.getElementById('text').value;
           // Crear una nueva etiqueta p
           var lecusu = document.createElement('h4');
           lecusu.textContent = texto;
-          var nuevoParrafo = document.createElement('h4');
+          var nuevoParrafo = document.createElement('p');
           var etiqueta = "<";
           var etiqueta1 = "/";
           var etiqueta2 = "h4";
@@ -238,14 +239,14 @@
         
           // Agregar el nuevo párrafo al body del documento
           miDiv.appendChild(nuevoParrafo);
-          document.body.appendChild(lecusu)
+          lectura.appendChild(lecusu);
         }
         function titulo5() {
         var texto = document.getElementById('text').value;
           // Crear una nueva etiqueta p
           var lecusu = document.createElement('h5');
           lecusu.textContent = texto;
-          var nuevoParrafo = document.createElement('h5');
+          var nuevoParrafo = document.createElement('p');
           var etiqueta = "<";
           var etiqueta1 = "/";
           var etiqueta2 = "h5";
@@ -260,7 +261,7 @@
         
           // Agregar el nuevo párrafo al body del documento
           miDiv.appendChild(nuevoParrafo);
-          document.body.appendChild(lecusu)
+          lectura.appendChild(lecusu);
         }
         function texto() {
         var texto = document.getElementById('text').value;
@@ -282,7 +283,7 @@
         
           // Agregar el nuevo párrafo al body del documento
           miDiv.appendChild(nuevoParrafo);
-          document.body.appendChild(lecusu)
+          lectura.appendChild(lecusu);
         }
       
         

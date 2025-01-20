@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PicBLUE</title>
-    <link rel="stylesheet" href="loby.css">
+   
     <style>
         body {
           background-color: rgb(34, 71, 63);
@@ -43,6 +43,7 @@
         }
 
         .card-description {
+            display: none;
             padding: 15px;
             font-size: 0.9em;
         }
@@ -69,6 +70,10 @@
                 font-size: 0.8em;
             }
         }
+   .fila{
+    background-color: aliceblue;
+    color: red;
+   }
     </style>
       <link rel="icon" href="logo.png" type="image/x-icon" >
 </head>
@@ -77,10 +82,14 @@
         PIC<span style="color: blue;">BLUE</span>
     </header>
     
+
+<!-- Fila 1 -->
+<button class="scroll-button scroll-left" onclick="scrollLeft()">⬅️</button>
+<div class="fila" id="imageContainer">
     <div class="container">
         <div class="card">
             <img src="picBlueImg/sprite.png.webp" alt="Imagen 1">
-            <div class="card-description">
+            <div class="card-description" id="p1">
               <p>Sprite editable perfecto para usar de molde para videojuegos</p>
                 <p>Caminar: Secuencia fluida que simula pasos naturales.</p>
                 <p>Saltar: Movimiento de ascenso y descenso.
@@ -95,13 +104,14 @@
                 <p>Defensa: Postura de bloqueo o cobertura.</p>
                
             </div>
+            <button id="mostrarP1">detalles</button>
             <button>Comprar</button>
         </div>
 
 
         <div class="card">
             <img src="picBlueImg/un satélite enviando zondas de comunicación al espacio.png" alt="Imagen 2">
-            <div class="card-description">
+            <div class="card-description" id="p2">
               <p>Satélite: El satélite es un dispositivo de alta tecnología con paneles solares extendidos en ambos lados para captar energía del sol. Los paneles son de un azul oscuro, con una superficie texturizada que refleja la luz solar. El cuerpo principal del satélite es cilíndrico, con varias antenas y dispositivos de comunicación sobresaliendo.</p>  
               <p>Antenas: Las antenas están desplegadas en diferentes direcciones, emitiendo ondas de comunicación hacia el espacio. Las ondas están representadas por líneas onduladas que se alejan del satélite, simbolizando la transmisión de datos hacia diversos puntos del cosmos.</p>
               <p>Fondo: El fondo muestra la vastedad del espacio, con estrellas brillantes en la distancia. La Tierra es visible en el borde inferior de la imagen, destacando la perspectiva desde el espacio.</p>
@@ -110,13 +120,14 @@
 
 
             </div>
+            <button id="mostrarP2">detalles</button>
             <button>Comprar</button>
         </div>
 
 
         <div class="card">
             <img src="picBlueImg/Batman.png" alt="Imagen 3">
-            <div class="card-description">
+            <div class="card-description" id="p3">
               <p>Fondo: La imagen muestra una vista nocturna de Gotham City, con altos rascacielos y una luna llena brillando en el cielo oscuro. Las luces de los edificios están encendidas, reflejando la actividad nocturna de la ciudad.
               </p>
               <p>Batman: En el centro de la imagen se encuentra Batman, vestido con su icónico traje negro. Su capa se extiende dramáticamente detrás de él, agitándose ligeramente como si el viento la moviera. Lleva su máscara negra con orejas puntiagudas, cubriendo su rostro y dejando al descubierto solo su mandíbula y boca.
@@ -128,10 +139,65 @@
               </p>
               
                </div>
-
+               <button id="mostrarP3">detalles</button>
             <button>Comprar</button>
         </div>
         <!-- Agrega más tarjetas aquí -->
     </div>
+ 
+</div>
+
+
+
+<!-- Fila 2 -->
+    <script>
+        function mostrarOcultar(id) {
+            var elemento = document.getElementById(id);
+            if (elemento.style.display === 'none') {
+                elemento.style.display = 'block';
+            } else {
+                elemento.style.display = 'none';
+            }
+        }
+
+        document.getElementById('mostrarP1').addEventListener('click', function() {
+            mostrarOcultar('p1');
+        });
+
+        document.getElementById('mostrarP2').addEventListener('click', function() {
+            mostrarOcultar('p2');
+        });
+
+        document.getElementById('mostrarP3').addEventListener('click', function() {
+            mostrarOcultar('p3');
+        });
+
+        document.getElementById('mostrarP4').addEventListener('click', function() {
+            mostrarOcultar('p4');
+        });
+
+        document.getElementById('mostrarP5').addEventListener('click', function() {
+            mostrarOcultar('p5');
+        });
+
+        document.getElementById('mostrarP6').addEventListener('click', function() {
+            mostrarOcultar('p6');
+        });
+    </script>
+    <script>
+        function scrollLeft() {
+            document.getElementById('imageContainer').scrollBy({
+                left: -200,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            document.getElementById('imageContainer').scrollBy({
+                left: 200,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
