@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+</head>
+<body>
+    <h1 contenteditable="true">Hola Mundo</h1>
+    <p contenteditable="true">Bienvenidos a mi primera página web.</p>
+    <button onclick="updateContent()">Actualizar Contenido</button>
+
+    <script>
+        function updateContent() {
+            const bodyContent = document.body.innerHTML;
+            fetch('/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `bodyContent=${encodeURIComponent(bodyContent)}`
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            });
+        }
+    </script>
+</body>
+</html>
+
+    <script>
+        const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const app = express();
+const PORT = 3000;
+
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+
+app.post('/update', (req, res) => {
+    const bodyContent = req.body.bodyContent;
+    const filePath = path.join(__dirname, 'datos', 'usuarios.txt');
+    fs.writeFile(filePath, bodyContent, (err) => {
+        if (err) {
+            return res.status(500).send('Error al actualizar el archivo');
+        }
+        res.send('Archivo actualizado correctamente');
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en http://localhost:${PORT}`);
+});
+
+        </script>
+</body>
+</html>
